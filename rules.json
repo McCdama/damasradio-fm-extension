@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Referer",
+          "operation": "set",
+          "value": "https://damasradio.fm/"
+        },
+        {
+          "header": "Origin",
+          "operation": "set",
+          "value": "https://damasradio.fm"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "radiodamascus.ortas.live",
+      "resourceTypes": [
+        "media",
+        "xmlhttprequest",
+        "other"
+      ]
+    }
+  }
+]
