@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Radio Damascus",
-  "version": "3.0",
+  "version": "3.7",
   "description": "Listen to Radio Damascus (إذاعة دمشق) FM live stream - unofficial Chrome extension",
+  "minimum_chrome_version": "116",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,13 +19,17 @@
   },
   "permissions": [
     "declarativeNetRequest",
-    "offscreen"
+    "offscreen",
+    "storage",
+    "alarms",
+    "notifications",
+    "contextMenus"
   ],
   "background": {
     "service_worker": "background.js"
   },
   "host_permissions": [
-    "https://radiodamascus.ortas.live/*"
+    "https://stream.damasradio.fm/*"
   ],
   "declarative_net_request": {
     "rule_resources": [
@@ -34,5 +39,14 @@
         "path": "rules.json"
       }
     ]
+  },
+  "commands": {
+    "toggle-play": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Play or pause Radio Damascus"
+    }
   }
 }

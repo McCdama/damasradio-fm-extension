@@ -18,7 +18,7 @@
       ]
     },
     "condition": {
-      "urlFilter": "radiodamascus.ortas.live",
+      "urlFilter": "||stream.damasradio.fm",
       "resourceTypes": [
         "media",
         "xmlhttprequest",
